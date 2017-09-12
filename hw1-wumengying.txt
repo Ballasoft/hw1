@@ -1,0 +1,152 @@
+1.Hiking
+   1.1 Car RentCarToHiking(Time,NumberOfFriends,CarCompanyTel)
+            MakeCall(CarCompanyTel);
+            BookCar(Time,NumberOfFriends);
+   1.2 Hotel BookHotel(Date,Time,NumberOfFriends)
+   1.3 CarPrepare()
+         FillGas();
+         MakeSureAttendance(NumberOfFriends);
+   1.4 Car.Drive(Mountain)
+   1.5 Eat(time)
+        if(time==noon||evening||morning)
+             Car.FindNearbyRestaurant();
+             Car.stop();
+             Eat();
+             MakeSureAttendance(NumberOfFriends);
+             Car.ContinueDrive();
+    1.6 Car.Drive(Mountain)
+             if(Car.Position==Mountain)
+                 Car.Stop();
+                 MakeSureAttendance(NumberOfFriends);
+                 BuyTickets(NumberOfFriends);
+                 People.LeaveBaggage(Car);
+                 Car.lock();
+                 StartHiking(Tickets,People);
+    1.7 Hiking();
+    1.8 Stop(Hiking)
+             MakeSureAttendance(NumberOfFriends);
+             ReturnToCar();
+    1.9 Eat(time)
+        if(time==noon||evening||morning)
+             Car.FindNearbyRestaurant();
+             Car.stop();
+             Eat();
+             MakeSureAttendance(NumberOfFriends);
+             Car.ContinueDrive();
+
+    1.10 Car.Drive(Hotel)
+             Car.Stop();
+             MakeSureAttendance(NumberOfFriends);
+             Car.lock();
+             CheckIn(Hotel,People);
+             HaveGoodRest();
+
+2.Organise a career fair
+    2.1 ReleaseNews(Location,TimePeriod,Website)
+    2.2 OpenOnlineRegisterSystem()
+              Register();
+              TimePeriod.select();
+    2.3 ConnectCompanies(E-mail/Message(Website,Time,Location))
+    2.4 MakeUpCareerFair(Time,Location)
+    2.5 ReleaseNews to students
+              E-mail(Location,Time);
+    2.6 CareerFair.Prepare(chairs,desks,food,etc);
+    2.7 CareerFair.Setup()
+    
+3.Order Pizza from Pizza Hut
+
+    ChoosePickupMethod()
+          if(online)
+             PizzaHut p = new PizzaHut();
+          else
+             PizzaStore p  = new PizzaStore();
+          p.work();
+class PizzaHut
+{  
+    OpenWebsite(PizzaHut.URL)
+    LogIn/CreateAccount(Name,PhoneNumber,Address,etc)
+    SearchPizza()
+    Pizza SelectPizza(flavor,size,etc)
+    MakeOrder(Pizza,PickUpTime,Account,PickUpMethod) 
+    Pay(Pizza.price)
+    PickUp(Pizza,PickUpTime,Account,PickUpMethod)
+}
+
+class PizzaStore
+{
+    
+    if(Time(OnSaling)
+        MakePhoneCall();
+        if(Salesman.pickup==true)
+          Connect();
+          ChoosePickupMethod(PickupStore,PickupOnline);
+          if(PickupOnline)
+              PizzaHut P = new PizzaHut();
+          else
+              MakeOrder(flavor,size,Name,PhoneNumber,PickupTime);
+              if(Time==PickupTime)
+                 Check();
+                 GotoPizzaStore.pickup();
+                 Pay();
+     else
+              GotoStore(MakeOrder());
+              Pay();
+              GotoPizzaStore.pickup();        
+}
+
+
+    
+4.Design a code sharing platform
+    4.1 LogInAccount(NickName,E-mail,score,id)
+    while(LogIn)
+    4.2 Platform.UploadCode()
+            Select programming language();
+            Select Category(e.g.:database,machine learning,neural network,website,game.etc);
+            UploadCode(getScore(>=0),Code,Documents,title);
+            Open.Comments();
+    4.3 Platform.DownloadCode()
+            Select programming language();
+            Select Category(e.g.:database,machine learning,neural network,website,game.etc);
+            while(Search(...))
+                if(your.score>=Search.item.score)
+                     DownloadCode();
+                else
+                     Println("Sorry! Go to upload to get scores or pay for it please:)");
+    4.4 Platform.CodeSalon()
+           Select programming language();
+           Select Category(e.g.:database,machine learning,neural network,website,game engine,etc.);
+           Talk();
+    4.5 Platform.Chat()
+           Chat.MakeFriends(id or NikeName);
+           Chat.talk(Friend);
+           Chat.DeleteFriends;
+    4.6 Platform.LogOut();
+    
+5.Design a soft-drink/snacks vending machine
+    5.1 Construct VendingMachine(item,item.price,item.number)
+    5.2 SetUp VendingMachine()
+    5.3 AddItem VendingMachine()
+         if(item.number<=0)
+              Add(item);
+              item.number++;
+              item++;
+    5.4 BuyItem VendingMachine(getprice())
+         select(item);
+         if(VendingMachine.getprice>=item.price)
+              item.out();
+              item.number--;
+              charge(getprice()-item.price);
+        else
+              wait();
+              if(wait.time>60seconds)
+                 end process;
+              end;
+    5.5 Repair&Service VendingMachine()
+          if(!charge)
+              call(Service);
+          else if(VendingMachine==not work)
+              call(RepairCenter);
+        
+                    
+                 
+    
